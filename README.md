@@ -276,17 +276,37 @@ Causes: distribution shift between train and validation, or a target too noisy f
 
 ### Figures
 
-| File | What you see |
-|---|---|
-| `01_monthly_volume.png` | Monthly Total_Paid per merchant, COVID shaded |
-| `02_yearly_seasonality.png` | Day-of-year patterns, one line per year |
-| `03_weekday_heatmap.png` | Relative daily payment intensity (Mon–Sun) |
-| `04_data_availability.png` | Calendar heatmap of observed-day coverage |
-| `05_model_comparison.png` | Bar chart of all candidates by Macro SMAPE |
-| `06_validation_*.png` | Actual vs. predicted for the chosen model, per fold |
-| `07_feature_importance.png` | Top-15 features by LightGBM gain |
-| `08_test_forecast.png` | Final Oct–Dec 2020 forecast with history |
-| `09_learning_curves_*.png` | Validation L2 curves with early-stopping markers |
+#### Monthly Payment Volume (COVID period shaded)
+![Monthly Volume](assets/01_monthly_volume.png)
+
+#### Yearly Seasonality — 14-day Rolling Average
+![Yearly Seasonality](assets/02_yearly_seasonality.png)
+
+#### Weekday Payment Intensity Heatmap
+![Weekday Heatmap](assets/03_weekday_heatmap.png)
+
+#### Data Availability Calendar
+![Data Availability](assets/04_data_availability.png)
+
+#### Model Comparison — All Candidates by Macro SMAPE
+![Model Comparison](assets/05_model_comparison.png)
+
+#### Validation: Actual vs Predicted (Fold A — Oct–Dec 2019)
+![Validation Fold A](assets/06_validation_fold_a.png)
+
+#### Validation: Actual vs Predicted (Fold B — Jul–Sep 2020)
+![Validation Fold B](assets/06_validation_fold_b.png)
+
+#### Feature Importance — Top 15 by Gain (Final Model)
+![Feature Importance](assets/07_feature_importance.png)
+
+#### Oct–Dec 2020 Forecast
+![Test Forecast](assets/08_test_forecast.png)
+
+#### Learning Curves — COVID Mode Comparison
+| include | flag | exclude |
+|:---:|:---:|:---:|
+| ![include](assets/09_learning_curves_include.png) | ![flag](assets/09_learning_curves_flag.png) | ![exclude](assets/09_learning_curves_exclude.png) |
 
 ---
 
